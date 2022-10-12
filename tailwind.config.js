@@ -12,7 +12,9 @@ module.exports = {
       'white': '#fafafa',
       'light-grey': '#D4D8D4',
       'purple': '#B67298',
-      'red': '#E21B1B'
+      'blush': "#e6bbbb",
+      'sage': "#c2c2a6",
+      'redish': '#E21B1B'
     },
     extend: {},
   },

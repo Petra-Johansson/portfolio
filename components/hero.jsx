@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center justify-center w-50 p-10 mt-20">
+    <div className="flex flex-col items-center justify-center w-50 p-10 mt-20 ">
       <h2 className="text-3xl">Hey you! I'm Petra</h2>
       <p>
         an aspiring frontend developer coming straight from the service business

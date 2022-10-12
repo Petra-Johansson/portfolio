@@ -11,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
   
-        <main className="text-green">
+        <div className="text-green">
           <Hero />
-        </main>
+        </div>
      
     </div>
   );

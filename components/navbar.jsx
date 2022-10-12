@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in dudration-280 bg-green bg-opacity-25 mb-10">
+    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-280 bg-green">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3">
         <Link href="/">
           <h1 className="text-3xl p-5 hover:text-light-grey hover:bg-green cursor-pointer rounded-full">
