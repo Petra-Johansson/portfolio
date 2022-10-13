@@ -41,7 +41,7 @@ export default function ContactForm() {
         type="text"
         name="name"
         value={name}
-        className="p-3 my-1"
+        className="p-3 my-1 rounded"
         placeholder="Your name"
         required
         onChange={(e) => {
@@ -52,7 +52,7 @@ export default function ContactForm() {
         type="email"
         name="email"
         value={email}
-        className="p-3 my-1"
+        className="p-3 my-1 rounded"
         placeholder="your e-mail"
         required
         onChange={(e) => {
@@ -63,7 +63,7 @@ export default function ContactForm() {
         name="message"
         value={message}
         rows="3"
-        className="p-3 my-1"
+        className="p-3 my-1 rounded"
         placeholder="Write your message here!"
         required
         onChange={(e) => {
@@ -73,7 +73,7 @@ export default function ContactForm() {
       <input
         type="submit"
         value="Send message"
-        className="text-white bg-purple hover:bg-white hover:text-purple p-3 my-2"
+        className="text-white bg-purple hover:bg-white hover:text-purple p-3 my-2 rounded"
         onClick={(e) => {
           sendMessage(e);
         }}
