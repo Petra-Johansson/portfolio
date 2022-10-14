@@ -23,42 +23,53 @@ export default function ContactForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(messdata),
-    }).then((res) => {
-      console.log("Response recieved");
-      if (res.status === 200 || 250) {
-        console.log("Response succeeded, message has been sent");
-        setSent(true);
-        setName("");
-        setEmail("");
-        setMessage("");
-      }
-    });
+    })
+      .then((res) => {
+        if (res.status === 200 || 250) {
+          setSent(true);
+          setName("");
+          setEmail("");
+          setMessage("");
+        } else {
+          console.log("E-mail could not be sent");
+        }
+      })
+      .catch((e) => console.log(e));
   };
 
   return (
     <form className="flex flex-col">
+      <label htmlFor="name" className="flex justify-start mt-2">
+        Your name
+      </label>
       <input
         type="text"
         name="name"
         value={name}
         className="p-3 my-1 rounded"
-        placeholder="Your name"
+        placeholder="goes here"
         required
         onChange={(e) => {
           setName(e.target.value);
         }}
       />
+      <label htmlFor="email" className="flex justify-start mt-2">
+        The e-mail you want..
+      </label>
       <input
         type="email"
         name="email"
         value={email}
         className="p-3 my-1 rounded"
-        placeholder="your e-mail"
+        placeholder="to be contacted on"
         required
         onChange={(e) => {
           setEmail(e.target.value);
         }}
       />
+      <label htmlFor="message" className="flex justify-start mt-2">
+        Your message
+      </label>
       <textarea
         name="message"
         value={message}
@@ -70,14 +81,22 @@ export default function ContactForm() {
           setMessage(e.target.value);
         }}
       />
+
       <input
         type="submit"
         value="Send message"
-        className="text-white bg-purple hover:bg-white hover:text-purple p-3 my-2 rounded"
+        className={
+          sent
+            ? "hidden"
+            : "text-white bg-purple hover:bg-white hover:text-purple hover:cursor-pointer p-3 my-2 rounded"
+        }
         onClick={(e) => {
           sendMessage(e);
         }}
       />
+      <span className={sent ? "text-purple text-bold" : "hidden"}>
+        Your message has been sent and I will respond ASAP :)
+      </span>
     </form>
   );
 }

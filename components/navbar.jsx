@@ -4,6 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+  const [hiddenByClick, setHiddenByClick] = useState(true);
 
   const seeNav = () => {
     setNav(!nav);
@@ -13,24 +14,24 @@ export default function Navbar() {
     <div className="fixed left-0 top-0 w-full z-10 ease-in duration-280 bg-green">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3">
         <Link href="/">
-          <h1 className="text-3xl p-5 hover:text-light-grey hover:bg-green cursor-pointer rounded-full">
+          <h1 className="text-3xl p-5  hover:bg-purple hover:font-bold cursor-pointer rounded-full">
             Petras Portfolio!
           </h1>
         </Link>
         <ul className="hidden sm:flex">
-          <li className="p-4 hover:text-light-grey hover:bg-green rounded-2xl">
+          <li className="p-4 text-xl hover:bg-purple hover:font-bold rounded-2xl">
             {" "}
             <Link href="/">Home</Link>
           </li>
-          <li className="p-4 hover:text-light-grey hover:bg-green rounded-2xl">
+          <li className="p-4 text-xl hover:bg-purple hover:font-bold rounded-2xl">
             {" "}
             <Link href="/about-me">About Me</Link>
           </li>
-          <li className="p-4 hover:text-light-grey hover:bg-green rounded-2xl">
+          <li className="p-4 text-xl hover:bg-purple hover:font-bold rounded-2xl">
             {" "}
             <Link href="/cv">My CV</Link>
           </li>
-          <li className="p-4  hover:text-light-grey hover:bg-green rounded-2xl">
+          <li className="p-4 text-xl  hover:bg-purple hover:font-bold rounded-2xl">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
@@ -39,8 +40,8 @@ export default function Navbar() {
          If scrensize is bigger than sm=640px, this menu is hidden
          otherwise it's set to block 
          */}
-        <div className="block sm:hidden z-10" onClick={seeNav}>
-          {nav ? <AiOutlineClose size={18} /> : <AiOutlineMenu size={18} />}
+        <div className="flex flex-col  sm:hidden z-30" onClick={seeNav}>
+          {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
         </div>
         <div
           className={
@@ -60,7 +61,7 @@ export default function Navbar() {
               <Link href="/cv">My CV</Link>
             </li>
             <li className="p-5">
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Contact </Link>
             </li>
           </ul>
         </div>

@@ -4,11 +4,12 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="flex flex-col items-center justify-center w-50 p-10 mt-20 ">
-      <h2 className="text-3xl my-4">Hey you! I'm Petra</h2>
-      <p className="sm:max-w-[50%] text-center">
+      <h2 className="text-3xl my-4 font-bold">Hey you! I'm Petra</h2>
+      <p className="sm:max-w-[60ch] text-center mb-7">
         an aspiring frontend developer coming straight from the service business
         with the ambition to create user friendly, but still exciting,
         excperiences!
+      
       </p>
 
       <div className="flex flex-col p-4">
