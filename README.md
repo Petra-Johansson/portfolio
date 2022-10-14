@@ -1,8 +1,10 @@
 # Petras Portfolio
 
-## Hey and welcome to my portfolio! The purpose of this is to have an easy way of getting in touch with future employers.
+### Hey and welcome to my portfolio! 
+### The purpose of this is to have an easy way of getting in touch with future employers.
 
-## To view this app please visit:
+
+### To view this app please visit:
 > 
 
 ---
@@ -12,8 +14,8 @@
 
 
 ### Built with
-- [![NextJS][nextjs]][NextJS-url] NextJS, a React-framework for building web applications.
-- [![Tailwind][tailwind.css]][tailwind-url]- Framwork for css.
+ [![NextJS][nextjs]][NextJS-url] - NextJS, a React-framework for building web applications.
+ [![Tailwind][tailwind.css]][tailwind-url] - Framwork for css.
 
 
 ---
