@@ -30,6 +30,7 @@ export default function ContactForm() {
           setName("");
           setEmail("");
           setMessage("");
+          console.log("Message has been sent with this body:", messdata)
         } else {
           console.log("E-mail could not be sent");
         }

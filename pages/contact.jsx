@@ -21,7 +21,7 @@ export default function Contact() {
             on LinkedIn,
           </p>
           <button className="text-white bg-purple hover:bg-white hover:text-purple p-2 mt-4 rounded">
-            <a href="https://github.com/Petra-Johansson">
+            <a href="https://www.linkedin.com/in/petra-johansson-4a2461229/">
               {" "}
               Go to my LinkedIn and get in touch
             </a>
