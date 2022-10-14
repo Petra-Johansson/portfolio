@@ -14,8 +14,8 @@
 
 
 ### Built with
- [![NextJS][nextjs]][NextJS-url] - NextJS, a React-framework for building web applications.
- [![Tailwind][tailwind.css]][tailwind-url] - Framwork for css.
+ - [![NextJS][nextjs]][NextJS-url] - NextJS, a React-framework for building web applications.
+ - [![Tailwind][tailwind.css]][tailwind-url] - Framwork for css.
 
 
 ---
