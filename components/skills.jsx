@@ -19,7 +19,7 @@ export default function Skills() {
           </ul>
         </div>
         <div className="main-skills my-5">
-          <h3 className="text-xl font-bold text-purple underline my-2">Other techniques we've been using/working with</h3>
+          <h3 className="text-xl font-bold text-purple underline my-2">Other techniques we have been using/working with</h3>
           <ul>
             <li>MySQL</li>
             <li>Docker</li>

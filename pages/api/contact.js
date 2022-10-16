@@ -1,7 +1,7 @@
-require("dotenv").config();
-const nodemailer = require("nodemailer");
+export default async function (req, res)  {
+    require("dotenv").config();
+  const nodemailer = require("nodemailer");
 
-export default async (req, res) => {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -19,21 +19,28 @@ export default async (req, res) => {
     if (error) {
       console.log(error);
     } else {
-      console.log("Server is ready to take our messages");
+      console.log(success, "Server is ready to take our messages");
     }
   });
 
-  try {
-    await transporter.sendMail({
+  const mailInfo ={
       from: email,
       to: process.env.MAILERUSER,
       subject: `Message sent from ${name}`,
       text: message + " | Sent from: " + email,
-      html: `<div>${message}</div><p>Sent from:
-  ${email}</p>`,
-    });
-  } catch (error) {
-    return res.status(500).json({ error: error.message || error.toString() });
-  }
-  return res.status(200).json("message has been sent");
+    };
+  
+  
+  await new Promise((resolve,reject)=> {
+    transporter.sendMail(mailInfo, function(error,info) {
+      if(error){
+        console.log(error)
+        reject(error)
+      } else {
+        console.log(info)
+        resolve(info) 
+      }
+    })
+  })
+  res.status(200).json({status: "OK"})
 };
