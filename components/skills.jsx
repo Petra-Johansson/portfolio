@@ -15,6 +15,7 @@ export default function Skills() {
             <li>React</li>
             <li>MongoDB</li>
             <li>Heroku</li>
+            <li>Git and GitHub</li>
             <li>Working agile, mainly according to scrum</li>
           </ul>
         </div>
@@ -27,6 +28,7 @@ export default function Skills() {
             <li>Testing with Jest, Mocha and Chai</li>
             <li>GitHooks and Husky</li>
             <li>Markdown and Yaml</li>
+            <li>Swagger</li>
             <li>Passport and OAuth 2.0</li>
             <li>GDPR and handling Cookies</li>
           </ul>

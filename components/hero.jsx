@@ -15,7 +15,7 @@ export default function Hero() {
         frontend developer!
         </p>
         <p className="sm:max-w-[60ch] text-center mb-7">
-        If you work at a company that could benefit from a curious, driven and 
+        If you work at a company that could benefit from a person that is curious, hungry-to-learn, driven and also a teamplayer - here I am!
       </p>
 
       <div className="flex flex-col p-4 text-xl text-white">
