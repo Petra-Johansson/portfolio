@@ -9,7 +9,7 @@ export default function PersonalInfo() {
         trying to understand what a site or app wants from ME - and my goal is
         to make sure that no one needs to ask themselves that.
       </p>
-      <p className="my-3 text-purple font-bold">
+      <p className="my-3 text-purple  text-xl font-bold">
         My focus will always be too create a user friendly site/app prior to a
         super fancy one - but of course I do not mind adding some extra flavour to
         it.
