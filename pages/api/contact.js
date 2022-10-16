@@ -22,26 +22,6 @@ export default async (req, res) => {
       console.log("Server is ready to take our messages");
     }
   });
-  /*
- const messageFormat={
-  from: `${email}`,
-    to: process.env.MAILERUSER,
-    subject: `Message sent from ${name}`,
-    text: `${message}` + " | Sent from: " + `${email}`,
-    html: `<div>${message}</div><p>Sent from:
-    ${email}</p>`,
- }
-
- transporter.sendMail(messageFormat, (error,data) => {
-  if(error) {
-    console.log(error)
-    res.status(400).send("error" + JSON.stringify(error))
-  } else {
-    console.log("Email has been sent")
-    res.status(200).json({success: true})
-  }
- })
-*/
 
   try {
     await transporter.sendMail({

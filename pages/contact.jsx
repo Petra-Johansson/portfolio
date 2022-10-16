@@ -20,14 +20,14 @@ export default function Contact() {
             I would love to get in touch with you. Send me an e-mail, contact me
             on LinkedIn,
           </p>
-          <button className="text-white bg-purple hover:bg-white hover:text-purple p-2 mt-4 rounded">
+          <button className="text-white bg-purple p-2 mt-4 rounded hover:bg-white hover:text-purple hover:translate-x-1 transition-color duration-200 delay-180 ">
             <a href="https://www.linkedin.com/in/petra-johansson-4a2461229/">
               {" "}
               Go to my LinkedIn and get in touch
             </a>
           </button>
           <button
-            className="text-white bg-purple hover:bg-white hover:text-purple p-2 mt-4 rounded"
+            className="text-white bg-purple p-2 mt-4 rounded hover:bg-white hover:text-purple hover:translate-x-1 transition-color duration-200 delay-180 "
             onClick={() =>
               (window.location.href = "mailto: johansson.m.petra@gmail.com")
             }

@@ -9,17 +9,23 @@ export default function Hero() {
         an aspiring frontend developer coming straight from the service business
         with the ambition to create user friendly, but still exciting,
         excperiences!
-      
+      </p>
+      <p className="sm:max-w-[60ch] text-center mb-7">
+        I am currently looking for a great place to do my internship at, as a part of my current education to becoming a
+        frontend developer!
+        </p>
+        <p className="sm:max-w-[60ch] text-center mb-7">
+        If you work at a company that could benefit from a curious, driven and 
       </p>
 
-      <div className="flex flex-col p-4">
-        <button className="text-white bg-purple hover:bg-white hover:text-purple p-2 rounded my-3">
-          <Link href="/cv">Check out my CV</Link>
+      <div className="flex flex-col p-4 text-xl text-white">
+        <button className=" bg-purple hover:bg-white hover:text-purple hover:translate-x-2 transition-color duration-200 delay-180 p-2 rounded my-3 ">
+          <Link href="/cv">Check out my CV &rarr;</Link>
         </button>
 
-        <button className="text-white bg-purple hover:bg-white hover:text-purple p-2 rounded my-3">
+        <button className=" bg-purple hover:bg-white hover:text-purple hover:translate-x-2 transition-color duration-200 delay-180 p-2 rounded my-3">
           <a href="https://github.com/Petra-Johansson">
-            <p>Check out my GitHub!</p>
+            <p>Check out my GitHub! &rarr;</p>
           </a>
         </button>
       </div>

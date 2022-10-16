@@ -16,7 +16,11 @@ module.exports = {
       'sage': "#c2c2a6",
       'redish': '#E21B1B'
     },
-    extend: {},
+    extend: {
+      screens: {
+        'md': '800px', 
+      },
+    },
   },
   plugins: [],
 }

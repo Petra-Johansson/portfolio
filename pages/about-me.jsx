@@ -1,5 +1,6 @@
 import Head from "next/head";
 import PersonalInfo from "../components/personal-info";
+import Skills from "../components/skills";
 
 export default function AboutMe() {
   return (
@@ -12,6 +13,7 @@ export default function AboutMe() {
       <h1 className="text-4xl my-3 font-bold text-blush">About me</h1>
 
       <PersonalInfo />
+      <Skills/>
     </div>
   );
 }

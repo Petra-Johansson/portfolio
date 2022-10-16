@@ -8,7 +8,7 @@ export default function V2ContactForm() {
   return sent ? (
     <div className="text-2xl text-purple max-w-[35ch]"> 
     <p className="mb-10">Thank you for your message. I will get back to you asap!</p>
-    <p>While you wait, you can always take a look at my GitHub or play this little quiz I created with only questions about myself!</p>
+  
     </div>
   ) : (
     <>
@@ -24,7 +24,7 @@ export default function V2ContactForm() {
           email: Yup.string()
             .email("Invalid e-mail address")
             .required("E-mail is required"),
-          message: Yup.string().required("Message is required"),
+          message: Yup.string().required("Don't forget to write your message"),
         })}
         onSubmit={async (values) => {
           const res = await fetch("/api/contact", {
@@ -56,13 +56,13 @@ export default function V2ContactForm() {
             <Field as="textarea" name="message" className="p-3 my-1 rounded" />
             <ErrorMessage name="message" />
             {formik.submitCount > 0 && !formik.isValid && (
-              <p>Hmm,something is missing</p>
+              <p className="my-1">Make sure that no field is left empty!</p>
             )}
             <button
               type="submit"
               disabled={formik.isSubmitting}
               className={
-                "text-white text-xl bg-purple hover:bg-white hover:text-purple hover:cursor-pointer p-3 my-2 rounded"
+                "text-white text-xl p-3 my-2 rounded bg-purple hover:bg-white hover:text-purple hover:cursor-pointer hover:translate-y-1 transition-color duration-200 delay-180"
               }
             >
               Send
