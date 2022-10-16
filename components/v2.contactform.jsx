@@ -6,7 +6,10 @@ export default function V2ContactForm() {
   const [sent, setSent] = useState(false);
 
   return sent ? (
-    <p>Thank you for your messgae, I will get back to you asap :)</p>
+    <div className="text-2xl text-purple max-w-[35ch]"> 
+    <p className="mb-10">Thank you for your message. I will get back to you asap!</p>
+    <p>While you wait, you can always take a look at my GitHub or play this little quiz I created, all with questions about myself!</p>
+    </div>
   ) : (
     <>
       <p className="mb-2">Or simply fill out this contact form!</p>
