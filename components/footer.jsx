@@ -6,7 +6,7 @@ export default function Footer() {
       <>
         <footer className="sticky top-[90vh] flex flex-col items-center w-full p-3 bg-green opacity-60">
         <p>This Portfolio is built with NextJS and Tailwind CSS. </p>
-        <p>It is deployed and hosted on Firebase.</p>
+        <p>It is deployed and hosted on Vercel.</p>
     
      </footer>   
     </>
