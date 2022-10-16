@@ -8,7 +8,7 @@ export default function V2ContactForm() {
   return sent ? (
     <div className="text-2xl text-purple max-w-[35ch]"> 
     <p className="mb-10">Thank you for your message. I will get back to you asap!</p>
-    <p>While you wait, you can always take a look at my GitHub or play this little quiz I created, all with questions about myself!</p>
+    <p>While you wait, you can always take a look at my GitHub or play this little quiz I created with only questions about myself!</p>
     </div>
   ) : (
     <>
