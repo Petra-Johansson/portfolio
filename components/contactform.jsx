@@ -1,6 +1,9 @@
 import { useState } from "react";
 
+
 export default function ContactForm() {
+  
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -30,7 +33,7 @@ export default function ContactForm() {
           setName("");
           setEmail("");
           setMessage("");
-          console.log("Message has been sent with this body:", messdata)
+          console.log("Message has been sent with this body:", messdata);
         } else {
           console.log("E-mail could not be sent");
         }
@@ -38,7 +41,9 @@ export default function ContactForm() {
       .catch((e) => console.log(e));
   };
 
-  return (
+  return sent ? (
+    <p>Thank you for your message. I will get back to you ASAP :) </p>
+  ) : (
     <form className="flex flex-col">
       <label htmlFor="name" className="flex justify-start mt-2">
         Your name
@@ -87,17 +92,12 @@ export default function ContactForm() {
         type="submit"
         value="Send message"
         className={
-          sent
-            ? "hidden"
-            : "text-white bg-purple hover:bg-white hover:text-purple hover:cursor-pointer p-3 my-2 rounded"
+          "text-white bg-purple hover:bg-white hover:text-purple hover:cursor-pointer p-3 my-2 rounded"
         }
         onClick={(e) => {
           sendMessage(e);
         }}
       />
-      <span className={sent ? "text-purple text-bold" : "hidden"}>
-        Your message has been sent and I will respond ASAP :)
-      </span>
     </form>
   );
 }

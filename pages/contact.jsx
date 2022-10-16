@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ContactForm from "../components/contactform";
+import V2ContactForm from "../components/v2.contactform";
 
 export default function Contact() {
   return (
@@ -15,7 +15,7 @@ export default function Contact() {
       <h1 className="text-4xl my-3 font-bold text-blush">Contact me!</h1>
 
       <div className="flex flex-col sm:flex-row sm:gap-20 my-4 p-2">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 sm:max-w-[50%]">
           <p className="text-center">
             I would love to get in touch with you. Send me an e-mail, contact me
             on LinkedIn,
@@ -36,9 +36,8 @@ export default function Contact() {
             Send me an e-mail
           </button>
         </div>
-        <div className="mt-10 sm:mt-0">
-          <p className="mb-2">Or simply fill out this contact form!</p>
-          <ContactForm />
+        <div className="mt-10 sm:mt-0 min-w-[50%]">
+          <V2ContactForm />
         </div>
       </div>
     </div>
