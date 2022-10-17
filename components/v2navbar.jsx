@@ -4,14 +4,42 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [hiddenByClick, setHiddenByClick] = useState(true);
+  const [windowHeight, setWindowHeight] = useState("");
+
+  const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
+  const [boxShadow, setBoxShadow] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  const handleScroll = () => {
+    setWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    let backgroundTransparacyVar = windowHeight / 600;
+
+    if (backgroundTransparacyVar < 1) {
+      let boxShadowVar = backgroundTransparacyVar * 0.1;
+      setBackgroundTransparacy(backgroundTransparacyVar);
+      setBoxShadow(boxShadowVar);
+    }
+  }, [windowHeight]);
 
   const seeNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-280 bg-green">
+    <div
+      className="fixed left-0 top-0 w-full z-10 bg-green"
+      style={{
+        background: `rgba(17, 100, 89, ${backgroundTransparacy})`,
+        boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
+      }}
+    >
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3">
         <Link href="/">
           <h1 className="text-3xl p-5  hover:bg-purple hover:font-bold cursor-pointer rounded-full">
@@ -41,7 +69,7 @@ export default function Navbar() {
         </ul>
 
         {/*
-         If scrensize is bigger than md:800px this nav is hidden
+         If scrensize is bigger than md=800px, this menu is hidden
          */}
         <div className="flex flex-col  md:hidden z-30" onClick={seeNav}>
           {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
@@ -54,16 +82,16 @@ export default function Navbar() {
           }
         >
           <ul onClick={seeNav}>
-            <li className="p-5" >
+            <li className="p-5">
               <Link href="/">Home</Link>
             </li>
-            <li className="p-5" >
+            <li className="p-5">
               <Link href="/about-me">About Me</Link>
             </li>
             <li className="p-5">
               <Link href="/cv">My CV</Link>
             </li>
-            <li className="p-5" >
+            <li className="p-5">
               <Link href="/contact">Contact </Link>
             </li>
           </ul>
