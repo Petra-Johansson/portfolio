@@ -4,8 +4,12 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+  
+  /* This is to control the navbar on scroll.
+  When user scrolls down the navbar goes from black to becomming more and more green -
+  but it should go the other way/that the opacity changes so that you can see the content through the nav 
+  */
   const [windowHeight, setWindowHeight] = useState("");
-
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [boxShadow, setBoxShadow] = useState(0);
 

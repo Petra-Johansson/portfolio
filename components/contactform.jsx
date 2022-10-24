@@ -92,7 +92,7 @@ export default function ContactForm() {
         type="submit"
         value="Send message"
         className={
-          "text-white bg-purple hover:bg-white hover:text-purple hover:cursor-pointer p-3 my-2 rounded"
+          "text-white bg-purple hover:bg-white hover:text-purple hover:cursor-pointer duration-250 p-3 my-2 rounded"
         }
         onClick={(e) => {
           sendMessage(e);

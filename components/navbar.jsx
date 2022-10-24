@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [hiddenByClick, setHiddenByClick] = useState(true);
 
   const seeNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-280 bg-green">
+    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-280  bg-green ">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3">
         <Link href="/">
           <h1 className="text-3xl p-5  hover:bg-purple hover:font-bold cursor-pointer rounded-full">
@@ -19,23 +18,23 @@ export default function Navbar() {
           </h1>
         </Link>
         <ul className="hidden md:flex">
-          <li className="p-4 text-xl hover:bg-purple hover:font-bold rounded-2xl hover:translate-x-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/">Home</Link>
           </li>
-          <li className="p-4 text-xl hover:bg-purple hover:font-bold rounded-2xl hover:translate-x-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/about-me">About Me</Link>
           </li>
-          <li className="p-4 text-xl hover:bg-purple hover:font-bold rounded-2xl hover:translate-x-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/cv">My CV</Link>
           </li>
-          <li className="p-4 text-xl hover:bg-purple hover:font-bold rounded-2xl hover:translate-x-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/projects">Projects</Link>
           </li>
-          <li className="p-4 text-xl  hover:bg-purple hover:font-bold rounded-2xl hover:translate-x-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl  hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
