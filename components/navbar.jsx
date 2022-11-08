@@ -18,23 +18,23 @@ export default function Navbar() {
           </h1>
         </Link>
         <ul className="hidden md:flex">
-          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl focus:bg-purple hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/">Home</Link>
           </li>
-          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl focus:bg-purple hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/about-me">About Me</Link>
           </li>
-          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl focus:bg-purple hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/cv">My CV</Link>
           </li>
-          <li className="p-4 text-xl hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl focus:bg-purple hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             {" "}
             <Link href="/projects">Projects</Link>
           </li>
-          <li className="p-4 text-xl  hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
+          <li className="p-4 text-xl focus:bg-purple hover:bg-purple hover:scale-110 rounded-2xl hover:translate-y-1 transition-color duration-200 delay-180">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
